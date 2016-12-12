@@ -1,0 +1,102 @@
+#
+# generated on 2016/12/04 11:14:11
+#
+# --table-start--
+dataClass=com.appom44.tictactoe.entities.GamePlayed
+tableName=GamePlayed
+# --table-fields-start--
+# --field-start--
+fieldName=gameId
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=participants
+foreignCollection=true
+# --field-end--
+# --field-start--
+fieldName=completed
+# --field-end--
+# --field-start--
+fieldName=date
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.appom44.tictactoe.entities.GamePlayer
+tableName=GamePlayer
+# --table-fields-start--
+# --field-start--
+fieldName=GamePlayerId
+columnName=GamePlayerID
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=game
+columnName=Game
+canBeNull=false
+foreign=true
+uniqueCombo=true
+# --field-end--
+# --field-start--
+fieldName=player
+columnName=Player
+canBeNull=false
+foreign=true
+uniqueCombo=true
+# --field-end--
+# --field-start--
+fieldName=isWinner
+columnName=IsWinner
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.appom44.tictactoe.entities.Player
+tableName=Player
+# --table-fields-start--
+# --field-start--
+fieldName=id
+columnName=id
+id=true
+useGetSet=true
+# --field-end--
+# --field-start--
+fieldName=name
+columnName=Name
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=gamesPlayed
+columnName=GamesPlayed
+foreignCollection=true
+foreignCollectionColumnName=GamesPlayed
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.appom44.tictactoe.TicTacToePlayer
+tableName=tictactoeplayer
+# --table-fields-start--
+# --field-start--
+fieldName=id
+columnName=id
+id=true
+useGetSet=true
+# --field-end--
+# --field-start--
+fieldName=name
+columnName=Name
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=gamesPlayed
+columnName=GamesPlayed
+foreignCollection=true
+foreignCollectionColumnName=GamesPlayed
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################

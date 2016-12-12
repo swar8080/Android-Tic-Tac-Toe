@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Tic Tac Toe</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_player_select">Enter Player Names</string>
+
+    <string name="status_temp">status_temp</string>
+
+    <string name="player1_default_name">Player 1</string>
+    <string name="player2_default_name">Player 2</string>
+
+</resources>

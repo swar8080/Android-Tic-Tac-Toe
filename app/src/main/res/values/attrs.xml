@@ -1,0 +1,20 @@
+<resources>
+    
+   <declare-styleable name="BoardLayout">
+       <attr name="rows" format="integer"/>
+       <attr name="columns" format="integer"/>
+   </declare-styleable>
+       
+   <declare-styleable name="BoardValue">
+       <attr name="topBorder" format="boolean" />
+       <attr name="rightBorder" format="boolean" />
+       <attr name="bottomBorder" format="boolean" />
+       <attr name="leftBorder" format="boolean" />
+       <attr name="value" format="enum">
+           <enum name="blank" value="0"/>
+           <enum name="X" value="1"/>
+           <enum name="O" value="2"/>
+       </attr> 
+	</declare-styleable>
+   
+</resources>

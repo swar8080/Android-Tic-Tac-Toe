@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="player_stat_heading">Player Stats</string>
+    <string name="stat_games_played">Games Played:</string>
+    <string name="stat_games_won_pct">Games Won:</string>
+    <string name="stat_games_lost_pct">Games Lost:</string>
+    <string name="stat_value_default">0</string>
+</resources>

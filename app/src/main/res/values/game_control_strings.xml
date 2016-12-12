@@ -1,0 +1,7 @@
+<resources>
+    <string name="game_start_button">Start Game</string>
+    <string name="reset_button">Reset</string>
+    <string name="database_button">Database</string>
+    <string name="default_player1_name">Player 1</string>
+    <string name="default_player2_name">Player 2</string>
+</resources>

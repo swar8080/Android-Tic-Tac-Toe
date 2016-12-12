@@ -1,0 +1,157 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/TicTacToe"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    android:visibility="visible"
+    android:weightSum="10" >
+
+    <RelativeLayout
+        android:id="@+id/PlayerInfo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:gravity="left" >
+
+        <TextView style="@style/PlayerLink"
+            android:id="@+id/Player1Link"
+            android:layout_centerVertical="true" />
+
+        <TextView style="@style/PlayerLink"
+            android:id="@+id/Player2Link"
+            android:layout_marginLeft="120dp"
+            android:layout_alignBaseline="@+id/Player1Link"
+            android:layout_alignBottom="@+id/Player1Link"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+    
+    <com.appom44.tictactoe.BoardLayout
+        android:id="@+id/BoardLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8.5"
+        android:orientation="vertical"
+        android:weightSum="3"
+        custom:columns="3"
+        custom:rows="3" >
+
+        <LinearLayout style="@style/BoardRow" >
+
+            <com.appom44.tictactoe.BoardSpace style="@style/BoardSpace"
+                android:id="@+id/Space1"
+                custom:bottomBorder="true"
+                custom:leftBorder="false"
+                custom:rightBorder="true"
+                custom:topBorder="false"
+                custom:value="blank" />
+
+            <com.appom44.tictactoe.BoardSpace style="@style/BoardSpace"
+                android:id="@+id/Space2"
+                custom:bottomBorder="true"
+                custom:leftBorder="true"
+                custom:rightBorder="true"
+                custom:topBorder="false"
+                custom:value="blank" />
+
+            <com.appom44.tictactoe.BoardSpace style="@style/BoardSpace"
+                android:id="@+id/Space3"
+                custom:bottomBorder="true"
+                custom:leftBorder="true"
+                custom:rightBorder="false"
+                custom:topBorder="false"
+                custom:value="blank" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/BoardRow">
+
+            <com.appom44.tictactoe.BoardSpace style="@style/BoardSpace"
+                android:id="@+id/Space4"
+                custom:bottomBorder="true"
+                custom:leftBorder="false"
+                custom:rightBorder="true"
+                custom:topBorder="true"
+                custom:value="blank" />
+
+            <com.appom44.tictactoe.BoardSpace style="@style/BoardSpace"
+                android:id="@+id/Space5"
+                custom:bottomBorder="true"
+                custom:leftBorder="true"
+                custom:rightBorder="true"
+                custom:topBorder="true"
+                custom:value="blank" />
+
+            <com.appom44.tictactoe.BoardSpace style="@style/BoardSpace"
+                android:id="@+id/Space6"
+                custom:bottomBorder="true"
+                custom:leftBorder="true"
+                custom:rightBorder="false"
+                custom:topBorder="true"
+                custom:value="blank" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/BoardRow">
+
+            <com.appom44.tictactoe.BoardSpace style="@style/BoardSpace"
+                android:id="@+id/Space7"
+                custom:bottomBorder="false"
+                custom:leftBorder="false"
+                custom:rightBorder="true"
+                custom:topBorder="true"
+                custom:value="blank" />
+
+            <com.appom44.tictactoe.BoardSpace style="@style/BoardSpace"
+                android:id="@+id/Space8"
+                custom:bottomBorder="false"
+                custom:leftBorder="true"
+                custom:rightBorder="true"
+                custom:topBorder="true"
+                custom:value="blank" />
+
+            <com.appom44.tictactoe.BoardSpace style="@style/BoardSpace"
+                android:id="@+id/Space9"
+                custom:bottomBorder="false"
+                custom:leftBorder="true"
+                custom:rightBorder="false"
+                custom:topBorder="true"
+                custom:value="blank" />
+        </LinearLayout>
+    </com.appom44.tictactoe.BoardLayout>
+
+    <RelativeLayout
+        android:id="@+id/game_controls"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:id="@+id/game_status"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:ems="10"
+            android:gravity="center"
+            android:text="@string/status_temp"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/reset_game"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:text="@string/reset_button"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/save_game"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/reset_game"
+            android:text="@string/database_button" />
+    </RelativeLayout>
+
+</LinearLayout>
