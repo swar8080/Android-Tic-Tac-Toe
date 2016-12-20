@@ -2,6 +2,7 @@ package com.appom44.tictactoe;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,6 +24,20 @@ public class PlayerSelectActivity extends Activity {
 
         player1 = (EditText)findViewById(R.id.player1_edit_text);
         player2 = (EditText)findViewById(R.id.player2_edit_text);
+
+        SharedPreferences sharedPreferences = this.getPreferences(MODE_PRIVATE);
+        player1.setText(
+                sharedPreferences.getString(
+                    getString(R.string.last_playerX_name),
+                    getString(R.string.default_player1_name)
+                )
+        );
+        player2.setText(
+                sharedPreferences.getString(
+                        getString(R.string.last_playerO_name),
+                        getString(R.string.default_player2_name)
+                )
+        );
 
         Button startButton = (Button)findViewById(R.id.start_game_button);
         startButton.setOnClickListener(new View.OnClickListener() {
