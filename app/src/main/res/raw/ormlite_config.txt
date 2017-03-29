@@ -1,5 +1,5 @@
 #
-# generated on 2016/12/04 11:14:11
+# generated on 2016/12/20 04:24:52
 #
 # --table-start--
 dataClass=com.appom44.tictactoe.entities.GamePlayed
@@ -77,7 +77,7 @@ foreignCollectionColumnName=GamesPlayed
 # --table-end--
 #################################
 # --table-start--
-dataClass=com.appom44.tictactoe.TicTacToePlayer
+dataClass=com.appom44.tictactoe.entities.TicTacToePlayer
 tableName=tictactoeplayer
 # --table-fields-start--
 # --field-start--

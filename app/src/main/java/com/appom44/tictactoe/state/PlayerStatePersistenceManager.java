@@ -2,8 +2,9 @@ package com.appom44.tictactoe.state;
 
 import android.os.Bundle;
 
-import com.appom44.tictactoe.BoardSpaceValue;
-import com.appom44.tictactoe.TicTacToePlayer;
+import com.appom44.tictactoe.game_logic.BoardSpaceValue;
+import com.appom44.tictactoe.entities.TicTacToePlayer;
+import com.appom44.tictactoe.portable.AbstractStatePersistenceManager;
 
 /**
  * Created by swar8080 on 11/20/2016.

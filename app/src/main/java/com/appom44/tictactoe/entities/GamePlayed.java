@@ -1,5 +1,6 @@
 package com.appom44.tictactoe.entities;
 
+import com.appom44.tictactoe.entities.FieldNames.GamePlayedFields;
 import com.j256.ormlite.dao.ForeignCollection;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.field.ForeignCollectionField;
@@ -14,16 +15,16 @@ import java.util.Date;
 @DatabaseTable(tableName = "GamePlayed")
 public class GamePlayed {
 
-    @DatabaseField(generatedId = true)
+    @DatabaseField(generatedId = true, columnName = GamePlayedFields.GAME_ID)
     private int gameId;
 
     @ForeignCollectionField(eager = false)
     private ForeignCollection<GamePlayer> participants;
 
-    @DatabaseField
+    @DatabaseField(columnName = GamePlayedFields.COMPLETED)
     private boolean completed;
 
-    @DatabaseField
+    @DatabaseField(columnName = GamePlayedFields.DATE)
     private Date date;
 
     //needed for ORM

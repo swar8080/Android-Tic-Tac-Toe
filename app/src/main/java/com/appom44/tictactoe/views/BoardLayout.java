@@ -1,4 +1,4 @@
-package com.appom44.tictactoe;
+package com.appom44.tictactoe.views;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -10,9 +10,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-import com.appom44.tictactoe.communication.onBoardSpaceClickListener;
+import com.appom44.tictactoe.game_logic.BoardSpaceValue;
+import com.appom44.tictactoe.R;
 
-public class BoardLayout extends LinearLayout implements IBoardLayout{
+public class BoardLayout extends LinearLayout implements IBoardLayout {
 	private int rows;
 	private int columns;
 	private ChildSpacesAccessor childSpaces;
@@ -45,14 +46,16 @@ public class BoardLayout extends LinearLayout implements IBoardLayout{
 	
 	@Override
 	protected void onFinishInflate(){
-		childSpaces = new ChildSpacesAccessor();
+		super.onFinishInflate();
+        childSpaces = new ChildSpacesAccessor();
 		
 		Iterator<BoardSpace> iterator = childSpaces.iterator();
 		while (iterator.hasNext()){
 			registerBoardSpaceListeners(iterator.next());
 		}
-		
-		//todo add some validation for rows/column count
+
+		//todo add validation
+
 	}
 	
 	@Override
@@ -66,13 +69,13 @@ public class BoardLayout extends LinearLayout implements IBoardLayout{
 
 			@Override
 			public void onClick(View v) {
-			BoardSpace touched = (BoardSpace)v;
-			int spaceIndex = childSpaces.indexOf(touched);
+                BoardSpace touched = (BoardSpace)v;
+                int spaceIndex = childSpaces.indexOf(touched);
 
-			//notify subscribers that a board space was touched in this IBoardLayout
-			for (onBoardSpaceClickListener listener : boardSpaceClickSubscribers ){
-				listener.onBoardSpaceClick(BoardLayout.this,spaceIndex);
-			}
+                //notify subscribers that a board space was touched in this IBoardLayout
+                for (onBoardSpaceClickListener listener : boardSpaceClickSubscribers ){
+                    listener.onBoardSpaceClick(BoardLayout.this,spaceIndex);
+                }
 			}
 			
 		});

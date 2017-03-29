@@ -4,7 +4,7 @@ package com.appom44.tictactoe.entities.FieldNames;
  * Created by swar8080 on 12/4/2016.
  */
 
-public class GamePlayerFields {
+public final class GamePlayerFields {
 
     private GamePlayerFields(){}
 

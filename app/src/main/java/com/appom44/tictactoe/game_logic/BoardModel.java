@@ -1,11 +1,10 @@
-package com.appom44.tictactoe;
+package com.appom44.tictactoe.game_logic;
 
 import android.os.Bundle;
 
-import com.appom44.tictactoe.communication.MoveSelectionInstruction;
-import com.appom44.tictactoe.communication.PassiveMessanger;
+import com.appom44.tictactoe.portable.PassiveMessanger;
 import com.appom44.tictactoe.state.BoardModelStatePersistenceManager;
-import com.appom44.tictactoe.state.IBundleable;
+import com.appom44.tictactoe.portable.IBundleable;
 
 public class BoardModel extends PassiveMessanger<GameState> implements IBundleable  {
 

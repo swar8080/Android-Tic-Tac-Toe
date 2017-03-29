@@ -11,4 +11,8 @@
     <string name="player1_default_name">Player 1</string>
     <string name="player2_default_name">Player 2</string>
 
+    <!-- Shared Preferences -->
+    <string name="last_player1_name_key">last_player1_name_key</string>
+    <string name="last_player2_name_key">last_player2_name_key</string>
+
 </resources>

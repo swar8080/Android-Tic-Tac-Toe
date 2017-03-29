@@ -1,10 +1,10 @@
-package com.appom44.tictactoe;
+package com.appom44.tictactoe.entities;
 
 import android.os.Bundle;
 
-import com.appom44.tictactoe.BoardSpaceValue;
+import com.appom44.tictactoe.game_logic.BoardSpaceValue;
 import com.appom44.tictactoe.entities.Player;
-import com.appom44.tictactoe.state.IBundleable;
+import com.appom44.tictactoe.portable.IBundleable;
 import com.appom44.tictactoe.state.PlayerStatePersistenceManager;
 
 public class TicTacToePlayer extends Player implements IBundleable  {

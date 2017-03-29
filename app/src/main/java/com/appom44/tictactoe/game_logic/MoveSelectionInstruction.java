@@ -1,7 +1,6 @@
-package com.appom44.tictactoe.communication;
+package com.appom44.tictactoe.game_logic;
 
 public enum MoveSelectionInstruction {
-	WAIT,
 	INVALID,
 	X,
 	O,

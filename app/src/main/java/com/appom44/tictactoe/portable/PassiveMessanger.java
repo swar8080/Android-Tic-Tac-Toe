@@ -1,4 +1,4 @@
-package com.appom44.tictactoe.communication;
+package com.appom44.tictactoe.portable;
 
 import java.util.ArrayList;
 

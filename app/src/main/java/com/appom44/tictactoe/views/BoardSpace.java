@@ -1,4 +1,4 @@
-package com.appom44.tictactoe;
+package com.appom44.tictactoe.views;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -8,10 +8,12 @@ import android.graphics.Paint;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.util.AttributeSet;
-import android.widget.ImageView;
+
+import com.appom44.tictactoe.game_logic.BoardSpaceValue;
+import com.appom44.tictactoe.R;
 
 
-public class BoardSpace extends ImageView{
+public class BoardSpace extends android.support.v7.widget.AppCompatImageView{
 
 	//state key values
 	private static final String VALUE = "value";

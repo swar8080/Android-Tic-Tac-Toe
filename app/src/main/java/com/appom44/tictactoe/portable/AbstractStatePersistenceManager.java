@@ -1,6 +1,8 @@
-package com.appom44.tictactoe.state;
+package com.appom44.tictactoe.portable;
 
 import android.os.Bundle;
+
+import com.appom44.tictactoe.portable.IBundleable;
 
 /**
  * Created by steven on 2016-11-05.
@@ -13,11 +15,11 @@ public abstract class AbstractStatePersistenceManager<T extends IBundleable> {
     protected abstract T restore(Bundle state);
     protected abstract Bundle save(T source);
 
-    public final T restoreLastInstanaceOrDefault(Bundle activityState, T defaultIfNotExists){
-        return restoreSpecificInstanaceOrDefault(activityState,null,defaultIfNotExists);
+    public final T restoreLastInstanceOrDefault(Bundle activityState, T defaultIfNotExists){
+        return restoreSpecificInstanceOrDefault(activityState,null,defaultIfNotExists);
     }
 
-    public final T restoreSpecificInstanaceOrDefault(Bundle activityState, String objIdentifier, T defaultIfNotExists){
+    public final T restoreSpecificInstanceOrDefault(Bundle activityState, String objIdentifier, T defaultIfNotExists){
         String key;
 
         if (activityState != null){
@@ -43,8 +45,6 @@ public abstract class AbstractStatePersistenceManager<T extends IBundleable> {
             activityState.putBundle(SaveKey(objIdentifier),this.save(source));
         }
     }
-
-
 
     private String SaveKey(String identifier){
         if (identifier != null){

@@ -1,3 +1,5 @@
+//Useful for testing database functionality: https://github.com/sanathp/DatabaseManager_For_Android
+
 //add your package name here example: package com.example.dbm;
 package com.appom44.tictactoe.persistence;
 
@@ -204,7 +206,7 @@ public class AndroidDatabaseManager extends Activity implements OnItemClickListe
 		
 		
 		//when user enter a custom query in text view and clicks on submit query button
-		//display results in tablelayout
+		//getUserSelection results in tablelayout
 		submitQuery.setOnClickListener(new OnClickListener() {
 			
 			@Override
@@ -222,7 +224,7 @@ public class AndroidDatabaseManager extends Activity implements OnItemClickListe
 				Cursor Message2 =alc2.get(1);
 				Message2.moveToLast();
 				
-				//if the query returns results display the results in table layout
+				//if the query returns results getUserSelection the results in table layout
 				if(Message2.getString(0).equalsIgnoreCase("Success"))
 				{	
 					
@@ -310,7 +312,7 @@ public class AndroidDatabaseManager extends Activity implements OnItemClickListe
 		 select_table.setAdapter(tablenamesadapter);
 		 }
 		 
-		 // when a table names is selecte display the table contents
+		 // when a table names is selecte getUserSelection the table contents
 		 select_table.setOnItemSelectedListener(new OnItemSelectedListener() {
 
 	            @Override
@@ -392,7 +394,7 @@ public class AndroidDatabaseManager extends Activity implements OnItemClickListe
 	            	//saving cursor to the static indexinfo class which can be resued by the other functions
 	            	indexInfo.maincursor=c2;
 
-	            	// if the cursor returned form the database is not null we display the data in table layout
+	            	// if the cursor returned form the database is not null we getUserSelection the data in table layout
 	            	if(c2!=null)
 	            	{
 	            	int counts = c2.getCount();
@@ -672,7 +674,7 @@ public class AndroidDatabaseManager extends Activity implements OnItemClickListe
 	                    public void onNothingSelected(AdapterView<?> arg0) { }
 	                }));
 
-	            	//display the first row of the table with column names of the table selected by the user
+	            	//getUserSelection the first row of the table with column names of the table selected by the user
 	                TableRow tableheader = new TableRow(getApplicationContext());
 
 	                tableheader.setBackgroundColor(Color.BLACK);
@@ -696,8 +698,8 @@ public class AndroidDatabaseManager extends Activity implements OnItemClickListe
 	                tableLayout.addView(tableheader);
 	                c2.moveToFirst();
 
-	               //after displaying columnnames in the first row  we display data in the remaining columns
-	               //the below paginatetbale function will display the first 10 tuples of the tables
+	               //after displaying columnnames in the first row  we getUserSelection data in the remaining columns
+	               //the below paginatetbale function will getUserSelection the first 10 tuples of the tables
 	               //the remaining tuples can be viewed by clicking on the next button
 	                paginatetable(c2.getCount());
 	            	
@@ -878,7 +880,7 @@ public class AndroidDatabaseManager extends Activity implements OnItemClickListe
 	    }
   	   
   	  updaterowsv.addView(lp);
-        //after the layout has been created display it in a alert dialog  
+        //after the layout has been created getUserSelection it in a alert dialog
   	runOnUiThread(new Runnable() {
 		   @Override
 		   public void run() {
@@ -1057,7 +1059,7 @@ public class AndroidDatabaseManager extends Activity implements OnItemClickListe
 		{
 		c3=indexInfo.maincursor;
 		}
-    	// if the cursor returened form tha database is not null we display the data in table layout
+    	// if the cursor returened form tha database is not null we getUserSelection the data in table layout
     	if(c3!=null)
     	{
     	int counts = c3.getCount();
@@ -1084,8 +1086,8 @@ public class AndroidDatabaseManager extends Activity implements OnItemClickListe
         tableLayout.addView(tableheader);
         c3.moveToFirst();
 
-       //after displaying column names in the first row  we display data in the remaining columns
-       //the below paginate table function will display the first 10 tuples of the tables
+       //after displaying column names in the first row  we getUserSelection data in the remaining columns
+       //the below paginate table function will getUserSelection the first 10 tuples of the tables
        //the remaining tuples can be viewed by clicking on the next button
         paginatetable(c3.getCount());
     	}
@@ -1127,7 +1129,7 @@ public class AndroidDatabaseManager extends Activity implements OnItemClickListe
 		 c3.moveToFirst();
 		 int currentrow=0;
 
-		 //display the first 10 tuples of the table selected by user
+		 //getUserSelection the first 10 tuples of the table selected by user
 			 do
 			{
 
@@ -1145,7 +1147,7 @@ public class AndroidDatabaseManager extends Activity implements OnItemClickListe
   	       try{
   		    column_data = c3.getString(j);
   		}catch(Exception e){
-  			// Column data is not a string , do not display it	
+  			// Column data is not a string , do not getUserSelection it
   		}
                columsView.setText(column_data); 
                columsView.setTextColor(Color.parseColor("#000000"));
@@ -1173,7 +1175,7 @@ public class AndroidDatabaseManager extends Activity implements OnItemClickListe
                	  
                	  }
                	  indexInfo.value_string=value_string;
-               	  //the below function will display the alert dialog
+               	  //the below function will getUserSelection the alert dialog
                	  updateDeletePopup(0);
                  }
              });

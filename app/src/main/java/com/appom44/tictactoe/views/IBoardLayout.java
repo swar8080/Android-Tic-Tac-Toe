@@ -1,6 +1,6 @@
-package com.appom44.tictactoe;
+package com.appom44.tictactoe.views;
 
-import com.appom44.tictactoe.communication.onBoardSpaceClickListener;
+import com.appom44.tictactoe.game_logic.BoardSpaceValue;
 
 public interface IBoardLayout {
 	

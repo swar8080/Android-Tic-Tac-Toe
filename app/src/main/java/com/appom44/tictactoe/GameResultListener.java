@@ -2,9 +2,11 @@ package com.appom44.tictactoe;
 
 import android.util.Log;
 
-import com.appom44.tictactoe.communication.PassiveListener;
-import com.appom44.tictactoe.communication.PassiveMessanger;
+import com.appom44.tictactoe.entities.TicTacToePlayer;
+import com.appom44.tictactoe.portable.PassiveListener;
+import com.appom44.tictactoe.portable.PassiveMessanger;
 import com.appom44.tictactoe.entities.Player;
+import com.appom44.tictactoe.game_logic.GameState;
 import com.appom44.tictactoe.persistence.IGameResultRepository;
 
 import java.sql.SQLException;
@@ -25,7 +27,7 @@ public class GameResultListener {
         this._gameResultRepository = gameResultRepository;
     }
 
-    public void TrackOneGame(final PassiveMessanger<GameState> gameUpdates, final TicTacToePlayer playerX, final TicTacToePlayer playerO){
+    public void trackOneGame(final PassiveMessanger<GameState> gameUpdates, final TicTacToePlayer playerX, final TicTacToePlayer playerO){
         //todo validation
         final ArrayList<Player> players = new ArrayList<Player>();
         players.add(playerX);
@@ -59,7 +61,7 @@ public class GameResultListener {
                 catch (SQLException e){
                     String msg = e.getMessage() + e.getStackTrace();
                     Log.v("GameResultListener",msg);
-                    //throw new RuntimeException(msg);
+                    //add option for caller to be notified through callback of result if an exception occurs
                 }
             }
         });

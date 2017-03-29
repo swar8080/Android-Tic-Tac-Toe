@@ -2,8 +2,9 @@ package com.appom44.tictactoe;
 
 import android.widget.TextView;
 
-import com.appom44.tictactoe.communication.PassiveListener;
+import com.appom44.tictactoe.portable.PassiveListener;
 import com.appom44.tictactoe.entities.Player;
+import com.appom44.tictactoe.game_logic.GameState;
 
 public class GameCommentaryListener implements PassiveListener<GameState> {
 

@@ -12,6 +12,6 @@ import java.sql.SQLException;
 
 public class DatabaseConfigUtil extends OrmLiteConfigUtil {
     public static void main(String[] args) throws SQLException, IOException {
-        writeConfigFile(new File("C:/Users/swar8080/Downloads/appom44.tictactoe-20161119T212212Z/.appom44.tictactoe/app/src/main/res/raw/ormlite_config.txt"));
+        writeConfigFile(new File("C:/Users/Steven/Documents/Android/appom44.tictactoe-20161119T212212Z/.appom44.tictactoe/app/src/main/res/raw/ormlite_config.txt"));
     }
 }
